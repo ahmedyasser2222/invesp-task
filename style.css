@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+header img {
+  width: 200px;
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+main ul li {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 260px;
+  height: 350px;
+  margin: 4px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 4px;
+}
+main ul li .card-img {
+  position: relative;
+}
+
+main ul li img {
+  width: 100%;
+  height: 250px;
+}
+main ul li .card-content {
+  padding: 10px;
+  text-align: center;
+  color: #444444;
+}
+main ul li .card-content h3 {
+  font-size: 13px;
+}
+main ul li .card-content p {
+  font-size: 13px;
+  padding-top: 4px;
+}
+main ul li .card-img button {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  background-color: #444444;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s;
+  display: block;
+  opacity: 0;
+}
+main ul li .card-img button:active {
+  background-color: #444444;
+}
+main ul li .card-img button:hover {
+  filter: brightness(0.9);
+}
+main ul li:hover button {
+  height: 40px;
+  opacity: 1;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumbnails img:hover {
+  border-color: #444;
+}
